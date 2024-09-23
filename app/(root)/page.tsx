@@ -4,7 +4,11 @@ import TotalBalanceBox from "@/components/TotalBalanceBox";
 import React from "react";
 
 const Home = () => {
-  const loggedIn = { firstName: "Jerryemmanuel", lastName: "Dominic", email:"jerryemmanuelolisa@gmail.com" };
+  const loggedIn = {
+    firstName: "Jerryemmanuel",
+    lastName: "Dominic",
+    email: "jerryemmanuelolisa@gmail.com",
+  };
   return (
     <section className="home">
       <div className="home-content">
@@ -15,8 +19,8 @@ const Home = () => {
             user={loggedIn?.firstName || "Guest"}
             subtext="Access and manage your account and transaction efficiently"
           />
-          
-          <TotalBalanceBox 
+
+          <TotalBalanceBox
             accounts={[]}
             totalBanks={1}
             totalCurrentBalance={1250.35}
@@ -24,7 +28,11 @@ const Home = () => {
         </header>
         RECENT TRANSACTIONS
       </div>
-      <RightSidebar user={loggedIn} transactions={[]} banks={[{currentBalance: 123.50},{currentBalance: 223.89}]} />
+      <RightSidebar
+        user={loggedIn}
+        transactions={[]}
+        banks={[{ currentBalance: 123.5 }, { currentBalance: 223.89 }]}
+      />
     </section>
   );
 };
